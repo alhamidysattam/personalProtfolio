@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Poppins:ital,wght@1,500&display=swap');
+
+:root{
+
+       --yellow:#feed01;
+       --black:#000;
+       --white:#fff;
+       --border: .2rem solid var(--black);
+       --box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.3);
+}
+
+*{
+
+       font-family: 'Festive', cursive;
+       font-family: 'Poppins', sans-serif;
+       box-sizing: border-box;
+       outline: none;
+       text-decoration: none;
+       text-transform: capitalize;
+       cursor:none;
+       
+}
+
+
+*:active > .cursor{
+       transform: translateX(-20%) rotate(-6deg);
+
+}
+html{
+       font-size: 62.5%;
+       overflow-x:hidden;
+       scroll-padding-top:7rem;
+}
+
+html::-webkit-scrollbar{
+       width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+       background: var(--yellow);
+}
+
+html::-webkit-scrollbar-thumb{
+       background: var(--black);
+}
+
+body{
+       background: var(--yellow);
+       overflow-x:hidden;
+}
+
+.cursor{
+       position:absolute;
+       height: 4rem;
+       pointer-events: none;
+       top: 2rem; 
+       left: -2rem;
+       transform: translateX(-10%) ;
+       z-index: 10000;
+}
+
+.header{
+       padding: 1.5rem 10%;
+       position: fixed;
+       top: 0; left: 0; right: 0;
+       z-index: 1000;
+       background: var(--yellow);
+       display: flex;
+       align-items:center;
+       justify-content:space-between;
+}
+
+
+.header .logo{
+       font-size: 2.5rem;
+       color: var(--black);
+}
+
+.header #menu-btn{
+       height: 5rem;
+       width: 5rem;
+       line-height: 4.7rem;
+       border-radius: 50%;
+       border:var(--border);
+       background: var(--white);
+       font-size: 1.7rem;
+       text-align: center;
+
+}
+
+.header #menu-btn:hover{
+       background: var(--black);
+       color: var(--white);
+}
+
+.navbar{
+       position: fixed;
+       bottom: 0; left: -110%;
+       height: calc(100% - 8rem);
+       width: 50%;
+       z-index: 1000;
+       background: var(--black);
+       padding: 0.9%;
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content: center;
+       gap:1.5rem;
+       transition: .2s linear;
+}
+
+.navbar.active{
+       left: 0;
+}
+
+.navbar a{
+       font-size: 5.5rem;
+       color: var(--white);
+       text-transform: uppercase;
+       transition: 0.2s linear;
+}
+
+.navbar a:hover{
+       background: var(--white);
+       font-size: 4rem;
+       transform: scale(.9);
+       color: var(--black);
+       padding: .5rem 2rem ;
+}
+
+.navbar-img{
+       position: fixed;
+       bottom: 0; right: -110%;
+       height: calc(100% - 8rem);
+       width: 50%;
+       z-index: 1000;
+       transition: .2s linear;
+
+}
+
+.navbar-img.active{
+       right: 0;
+}
+.navbar-img img{
+       height: 100%;
+       width: 100%;
+       /* object-fit: cover;
+       object-position: top;*/
+       filter: grayscale(); /*make the image black and white*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width:1200px){
+       .header{
+              padding: 1.5rem 5%;
+       }
+}
+
+
+@media (max-width:991px){
+
+       html{
+              font-size: 55%;
+       }
+
+       .header{
+              padding: 1.5rem 2rem;
+       }
+       .cursor{
+              display: none;
+       }
+
+}
+
+
+@media (max-width:768px){
+       .navbar{
+              width: 100%;
+              z-index: 1200;
+              background: none;
+              
+       }
+
+       .navbar a{
+              background: var(--yellow);
+              font-size: 4rem;
+              transform: scale(.9);
+              color: var(--black);
+              border: var(--border);
+              padding: .5rem 2rem ;      
+       }
+
+       .navbar-img{
+              width: 100%;
+       }
+
+
+}
+
+
+@media (max-width:450px){
+
+       html{
+              font-size: 50%;
+       }
+
+
+}
