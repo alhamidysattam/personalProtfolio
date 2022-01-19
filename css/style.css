@@ -235,6 +235,148 @@ section{
 
 
 
+/* CSS ==> about section starts */
+
+.about{
+       background: var(--black);
+}
+
+.about .skill{
+       display: flex;
+       flex-wrap: wrap;
+       gap: 2rem;
+}
+
+.about .skill .title{ 
+       font-size: 3rem;
+       color: var(--yellow);
+       text-align:center;
+       padding-bottom: 1rem;
+       text-transform: uppercase;
+}
+
+
+.about .skill .box{ 
+       flex: 1 1 41rem;
+}
+
+
+.about .skill .box .progress{  
+       padding: 1rem 0;
+}
+
+.about .skill .box .progress h3{  
+       font-size: 2rem;
+       color: var(--white);
+       display: flex;
+       justify-content:space-between;
+
+
+       
+}
+
+.about .skill .box .progress h3 span{  
+       color: var(--yellow);
+
+}
+
+.about .skill .box .progress .bar{
+       height: 2.5rem;
+       border: .2rem solid var(--white);
+       padding: 0.5rem;
+       margin-top: 1rem;
+
+}
+
+.about .skill .box .progress .bar span{
+       display: block;
+       background: var(--white);
+       height: 100%;
+       width:90% ;
+
+}
+
+.about .skill .box .progress.progress-2 .bar span{
+       width: 70% ;
+
+}
+.about .skill .box .progress.progress-3 .bar span{
+       width:65% ;
+
+}
+
+.about .skill .box .progress.progress-4 .bar span{
+       width:75% ;
+
+}
+
+.about .skill .box .progress.progress-5 .bar span{
+       width:85% ;
+
+}
+.about .skill .box .progress.progress-6  .bar span{
+       width:65% ;
+
+}
+
+
+.about .info-container{
+       display: flex;
+       flex-wrap: wrap;
+       gap: 2rem;
+       align-items: center;
+       margin-top: 3rem;
+}
+
+.about .info-container .info{
+       flex: 1 1 30rem;
+
+}
+
+.about .info-container .image{
+       flex: 1 1 30rem;
+
+}
+
+.about .info-container .image img{
+       width: 100%;
+}
+
+.about .info-container .info:first-child{
+       text-align: right;
+}
+
+.about .info-container .info p{
+       text-transform: none;
+       font-size: 2.5rem;
+       color: var(--white);
+       padding:1rem 0 ;
+
+}
+
+.about .info-container .info  p span{
+       color: var(--yellow);
+}
+
+
+
+/* CSS ==> about section Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*media queries*/
 
@@ -306,6 +448,10 @@ section{
               transform: translate(-50% , -100%) scale(1);
        }
 
+
+       .about .info-container .image{
+              order: -1;
+       }
 
 }
 

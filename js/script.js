@@ -38,9 +38,10 @@ document.querySelector('#menu-btn').onclick = () => {
 };
 
 
-//remove nav bar and image (and use media queries in CSS to show them agin)
-// for testing 
+//remove nav bar and image when scroll window 
+
 window.onscroll = () => {
        navbar.classList.remove('active');
        navbarImg.classList.remove('active');
 };
+
