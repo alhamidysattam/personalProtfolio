@@ -24,7 +24,7 @@ document.querySelectorAll('.navbar a ').forEach( link => {
               document.querySelector('.navbar-img img').src = link.getAttribute('data-src');
        };
        link.onmouseleave = () =>{
-              document.querySelector('.navbar-img img').src = "imges/home.png";
+              document.querySelector('.navbar-img img').src = "imges/home.jpg";
        };
 });
 
