@@ -9,6 +9,15 @@ window.onmousemove = (e) =>{
        cursor.style.left = e.pageX + 'px';
 }
 
+let homeImg = document.querySelector('.home .home-img');
+
+// home Img tracking 
+document.querySelector('.home').onmousemove = (e) =>{
+       homeImg.style.top = e.pageY + 'px';
+       homeImg.style.left = e.pageX + 'px';
+}
+
+
 //change the nav images based on the nav item
 document.querySelectorAll('.navbar a ').forEach( link => {
        link.onmouseenter = () =>{
@@ -30,10 +39,8 @@ document.querySelector('#menu-btn').onclick = () => {
 
 
 //remove nav bar and image (and use media queries in CSS to show them agin)
-/* for testing 
+// for testing 
 window.onscroll = () => {
        navbar.classList.remove('active');
        navbarImg.classList.remove('active');
 };
-
-*/

@@ -50,6 +50,10 @@ body{
        overflow-x:hidden;
 }
 
+section{
+       padding: 5rem 10%;
+}
+
 .cursor{
        position:absolute;
        height: 4rem;
@@ -145,17 +149,52 @@ body{
 .navbar-img img{
        height: 100%;
        width: 100%;
-       /* object-fit: cover;
-       object-position: top;*/
+       object-fit: cover;
+       object-position: top;
        filter: grayscale(); /*make the image black and white*/
 }
 
 
+.home{
+       margin-top: 8rem;
+       position: relative;
+}
+
+.home h3{
+       text-align: center;
+       font-size: 6vw;
+       text-transform: uppercase;
+       margin: 20px;
+
+}
+
+.home .home-text{
+       -webkit-text-stroke: .1rem var(--black);
+       color: var(--white);
+       position: relative;
+       z-index: 10 ;
+}
 
 
+.home .home-img{
+       position:absolute;
+       top: 0; left: 0;
+       transform: translate(-50% , -70%) scale(0) ; /*scale(0) to hide img*/
+       transition: .2s linear;
+       pointer-events: none;
+       height: 40rem;
+       width: 40rem;
+       object-fit: cover;
+}
 
 
+.home .home-text:hover{
+       text-shadow: var(--box-shadow);
+}
 
+.home .home-text:hover ~ .home-img{  /*if the user hover in the name his img appear*/
+       transform: translate(-50% , -70%) scale(1) ; 
+}
 
 
 
@@ -166,6 +205,12 @@ body{
        .header{
               padding: 1.5rem 5%;
        }
+
+
+       section{
+              padding: 3rem 5%;
+       }
+
 }
 
 
@@ -173,6 +218,10 @@ body{
 
        html{
               font-size: 55%;
+       }
+
+       section{
+              padding: 3rem 2rem;
        }
 
        .header{
@@ -204,6 +253,20 @@ body{
 
        .navbar-img{
               width: 100%;
+       }
+
+       .home h3{
+              font-size: 10vw;
+       }
+
+       .home .home-img{
+              height: 20rem;
+              width: 20rem;
+              transform: translate(-50% , -100%) scale(0);
+
+       }
+       .home .home-text:hover ~ .home-img{
+              transform: translate(-50% , -100%) scale(1);
        }
 
 
